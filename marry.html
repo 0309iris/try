@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rosemarry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/y8M8tGdR/icon.png">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <link href='https://fonts.googleapis.com/css?family=Noto Serif TC' rel='stylesheet'>
+</head>
+
+<style>
+  ::selection {
+    background-color:#0058b7;
+    color: #fff;
+  }
+
+  /**********************導覽列css****************************/
+  .popular-products-content {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+
+  .ciNxDx {
+    display: flex;
+    flex-direction: column;
+    width: calc(33% - 35%);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 30px 4px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in 0s;
+  }
+
+  .navbar-wrapper {
+    height: 90px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .iMKRuG {
+    height: 100%;
+    max-width: 1240px;
+    background-color: rgb(255, 255, 255);
+    margin: 0px auto;
+    padding: 0px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+
+  .iMKRuG>.group-actions {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+
+  .iMKRuG>.group-actions .button {
+    margin-right: 0px;
+    cursor: pointer;
+    position: relative;
+    font-family: "NSimSun";
+    font-size: 16px;
+  }
+
+  .groupactions {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+
+  .iMKRuG>.groupactions .button {
+    cursor: pointer;
+    margin-right: 30px;
+    position: relative;
+    font-family: "NSimSun";
+    font-size: 16px;
+  }
+
+  .buttonsecondary {
+    cursor: pointer;
+    margin-right: 30px;
+    position: relative;
+    font-family: "Noto Serif TC";
+    font-size: 24px;
+    text-decoration: none;
+    color: #020202;
+    outline: none;
+  }
+
+  a,
+  a:focus {
+    outline: none;
+  }
+
+  .carousel {
+    position: relative;
+    top: 80px;
+  }
+
+
+  .groupactions button {
+    padding: 8px 15px;
+    background-color:  #419ec0;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .groupactions button:hover {
+    background-color:#7eb9d6;
+  }
+
+  /*****************************上方固定 CSS*******************************/
+  .row {
+    /*padding-left: 100px;
+      padding-right: 100px;*/
+    position: relative;
+    top: 80px;
+  }
+
+
+
+  /*********************************************** 線條************************************* */
+
+  .footerline {
+    position: relative;
+    width: 85%;
+    height: 0.5px;
+    /* 線的高度 */
+    background-color: #909090;
+    /* 線的顏色 */
+    margin: 20px auto;
+  }
+
+
+
+  /*banner*/
+
+  .bannerQA {
+    text-align: center;
+    padding-top: 80px;
+  }
+
+  .banner {
+    max-width: 100%;
+  }
+
+  /*body*/
+
+  .inner {}
+
+  .info {
+    text-align: center;
+    color: rgb(89, 87, 87);
+    font-family: "Noto Serif TC", serif;
+  }
+
+  .infotitle {
+    font-size: 24px;
+    margin-bottom: 26px;
+    margin-top: 40px;
+  }
+
+  .infop {
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  .menus {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+  }
+
+  .menus1 {
+    width: 300px;
+    max-width: 100%;
+    padding: 10px;
+    max-width: 100%
+  }
+
+  .menus2 {
+    width: 300px;
+    max-width: 100%;
+    padding: 10px;
+    max-width: 100%
+  }
+
+  /*表單css*/
+
+  * {
+    box-sizing: border-box;
+  }
+
+  input[type=text],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+
+  input[type=submit] {
+    background-color : #419ec0;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+
+  input[type=submit]:hover {
+    background-color: #7eb9d6;
+  }
+
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+
+  /* Clear floats after the columns */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  .form {
+    padding-top: 20px;
+  }
+
+  .hh2 {
+    text-align: center;
+    font-family: "NSimSun";
+    color: #464545;
+  }
+
+  .pp {
+    text-align: center;
+    white-space: pre-line;
+  }
+
+  /*須知事項*/
+
+  .Grid-row-wrapper {
+    width: 1170px;
+  }
+
+  /**********************導覽列其他選單**********************/
+
+  /* 預設隱藏 checkbox */
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  /* 設置 label 的樣式 */
+  .toggle-label {
+    display: block;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: right;
+    /* 將 Toggle Menu 文字設置在右側 */
+    font-size: 30px;
+  }
+
+  /* 側邊選單的樣式 */
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    /*將側邊選單設置在右側並隱藏*/
+    transition: right 0.3s ease;
+  }
+
+  /* 當 checkbox 被選中時展開選單 */
+  input[type="checkbox"]:checked~.sidebar {
+    right: 0;
+  }
+
+  /* 關閉按鈕的樣式 */
+  .close-btn {
+    display: block;
+    text-align: right;
+    padding: 30px;
+    cursor: pointer;
+    color: rgb(89, 87, 87);
+    font-size: 40px;
+  }
+
+  /* 選單項目的樣式 */
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    font-family: "Noto Serif TC";
+    font-size: 18px;
+  }
+
+  .sidebar ul li {
+    padding: 20px;
+  }
+
+  .sidebar ul li a {
+    color: rgb(89, 87, 87);
+    text-decoration: none;
+  }
+
+  .sidebar ul li a:hover {
+    text-decoration: none;
+    color:#7eb9d6;
+  }
+
+  .menubutton {
+    padding-top: 14px;
+  }
+
+
+  /********************************RWD隱藏導覽列******************/
+
+  @media screen and (max-width: 930px) {
+    .link-secondary {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 930px) {
+    .left group-actions {
+      display: none;
+    }
+
+    .logofirst {
+      width: 200px;
+    }
+  }
+</style>
+
+<body style="background-color:#f6f6f6 ;">
+
+
+  <!--上方導覽列-->
+  <div class="navbar-wrapper shadow p-3 mb-5 bg-body">
+    <div class="iMKRuG">
+      <div class="left group-actions">
+        <div class="logofirst">
+          <a href="index.html"> <img src="https://i.postimg.cc/8CJNQJcL/logo-rosemarry-1.png" width="180"></a>
+        </div>
+      </div>
+      <div class="groupactions">
+        <a class="link-secondary buttonsecondary" href="rosemarry.html">關於品牌</a>
+        <a class="link-secondary buttonsecondary" href="spopping-xmas.html">線上選購</a>
+        <a class="link-secondary buttonsecondary" href="marry.html">喜餅彌月</a>
+        <a class="link-secondary buttonsecondary" href="new.html">最新消息</a>
+        <a class="link-secondary buttonsecondary" href="qa.html">購物須知</a>
+        <div class="button">
+          <img src="https://i.postimg.cc/JhdVggdn/SHOPPING.png" class="firstlogo" href="" width="30">
+        </div>
+        <div class="button secondary">
+          <a href="login.html">
+            <button class="Button__Wrapper-sc-1-1rpmxt-0 1ko0DP small" type="primary" style="width:120px">
+              <span>註冊/登入</span>
+            </button>
+          </a>
+        </div>
+        <!-- 其他選單項目 -->
+        <div class="menubutton">
+          <input type="checkbox" id="toggle">
+          <label for="toggle" class="toggle-label">&#9776;</label>
+          <div class="sidebar">
+            <label for="toggle" class="close-btn">&times;</label>
+            <img src="https://i.postimg.cc/8CJNQJcL/logo-rosemarry-1.png" href="#" alt="logo" height="50" ;>
+            <ul>
+              <li><a href="index.html">首頁</a></li>
+              <li><a href="rosemarry.html">關於品牌</a></li>
+              <li><a href="marry.html">喜餅彌月</a></li>
+              <li><a href="new.html">最新消息</a></li>
+              <li><a href="qa.html">購物須知</a></li>
+              <li><a href="login.html">會員中心</a></li>
+              <!-- 其他選單項目 -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--上方導覽列END-->
+
+  <!--banner-->
+  <div class="bannerQA">
+    <a href=""><img src="https://i.postimg.cc/prLRnF5t/image.webp" class="banner" alt=""></a>
+  </div>
+
+  <!--body-->
+  <div class="inner" style="width: 70% ; margin:0px auto;">
+    <section class="info">
+      <div class="infotitle">喜餅與彌月</div>
+      <div class="infop">
+        "rosemarry重視的是能夠一同分享的溫暖感受，想呈現給客人的是每個季節、每個時令，"
+        <br>
+        "結合自己生活土地上的食材所做成的甜點，結合四個不同節氣作為變化，"
+        <br>
+        "並堅持使用當季新鮮的材料，創造一個能夠滿足現代人們對於甜品的需求與想像的甜點城堡。"
+      </div>
+    </section>
+    <div class="menus">
+        <video width="640" height="360" controls class="menus1">
+          <source src="https://www.cupetit.com/cdn/shop/videos/c/vp/9d19a5e57847439f9e6e76d5177ef33e/9d19a5e57847439f9e6e76d5177ef33e.HD-1080p-7.2Mbps-29162969.mp4?v=0" type="video/mp4">
+        </video>
+    </div>
+  </div>
+
+
+  <!--表單-->
+
+  <div class="form">
+
+    <div class="hh2">
+      <h2>預約體驗</h2>
+    </div>
+    <div class="pp">
+      <p>對於我們有任何問題與報價需求，歡迎填寫表單或直接來電與我們聯繫！
+        每月試吃時間不固定場次，將由專員與您聯繫安排預約時間～</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">您的大名</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="fname" name="vul3" placeholder="楊過">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">手機號碼</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lname" name="lastname" placeholder="0909-520-520">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="country">選擇種類</label>
+          </div>
+          <div class="col-75">
+            <select id="country" name="country">
+              <option value="australia">喜餅</option>
+              <option value="canada">彌月</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">備註</label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="留下您的訊息，我們會盡快跟您聯絡！或直接來電(04)1234-5678詢問～" style="height:200px"></textarea>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <input type="submit" value="確認送出" onclick="showConfirmation()">
+        </div>
+    </div>
+
+  </div>
+
+   <!--FOTTER 使用Bootstrap 4 Grids-->
+
+   <div class="container-fluid mt-3">
+    <div class="roww row">
+      <div class="col-sm-6 col-lg-3 p-3 text-secondary bg-white">
+        <ul>
+          <li>關於我們</li>
+          <li>最新消息</li>
+          <li>商品列表</li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-lg-3 p-3 text-secondary bg-white">
+        <ul>
+          <li>喜餅與彌月</li>
+          <li>常見問題</li>
+          <li>會員中心</li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-lg-3 p-3 text-secondary bg-white">
+        <ul>
+          <li>客服服務時間<br>週一至週日10:00~17:00</li>
+          <li>客服服務電話<br>02-8988-8888</li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-lg-3 p-3 text-secondary bg-white">
+        <ul>
+          <li>營業時間<br>週一至週日11:00~19:00</li>
+          <li>最後取貨時間<br>週一至週日19:00</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  function showConfirmation() {
+      alert("已幫您送出預約資訊🫶");
+      // 這裡沒有自動消失的選項，因為 alert 需要用戶確認
+  }
+</script>
+
+</html>

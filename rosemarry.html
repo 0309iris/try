@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rosemarry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/y8M8tGdR/icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Noto Serif TC' rel='stylesheet'>
+  </head>
+
+<style>
+
+::selection {
+  background-color: #0058b7;
+  color: #fff;
+}
+
+    /*導覽列css*/
+    .popular-products-content {
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+    }
+    .ciNxDx {
+      display: flex;
+      flex-direction: column;
+      width: calc(33% - 20%);
+      margin: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 30px 4px;
+      cursor: pointer;
+      transition: box-shadow 0.2s ease-in 0s;
+    }
+
+    .navbar-wrapper {
+      height: 90px;
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+      background-color: rgb(255, 255, 255);
+      /* display: flex; */
+    }
+
+    .iMKRuG {
+      height: 100%;
+      max-width: 1240px;
+      background-color: rgb(255, 255, 255);
+      margin:0px auto;
+      padding: 0px;
+      display: flex;
+      -webkit-box-pack:justify;
+      justify-content:space-between;
+    }
+
+    .iMKRuG > .group-actions {
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+    }
+
+    .iMKRuG > .group-actions .button {
+      margin-right: 0px;
+      cursor: pointer;
+      position:relative;
+      font-family:"Noto Serif TC";
+      font-size :16px;
+    }
+
+    .groupactions {
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+    }
+
+    .iMKRuG > .groupactions .button {
+      cursor: pointer;
+      margin-right: 30px;
+      position: relative;
+      font-family: "Noto Serif TC";
+      font-size: 16px;
+    }
+
+    .buttonsecondary { 
+      cursor:pointer;
+      margin-right: 30px;
+      position: relative;
+      font-family: "Noto Serif TC";
+      font-size: 24px;
+      text-decoration: none;
+      color: #020202;
+      outline:none;
+    }
+
+    a,a:focus {
+      outline:none;
+    }
+
+    .carousel {
+      position: relative;
+      position: fixed;
+      top: 80px;F
+    }
+
+    .groupactions button {
+  padding: 8px 15px;
+  background-color: #419ec0;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  }
+
+  .groupactions button:hover {
+    background-color: #7eb9d6;
+  }
+    
+
+
+
+  /*下方選單*/
+
+    .roww {
+      background-color:#fff;
+      top: 80px;
+      position: relative;
+      display: flex;
+    }
+
+
+/* 右下角line */
+.fixed-icon {
+  position: fixed;
+  bottom: 30px; /* 距離底部的距離 */
+  right: 70px; /* 距離右側的距離 */
+  width: 5px; /* 圖案的寬度 */
+  border-radius: 50%; /* 圖案的圓角 */
+  background-color: #0074e4; /* 圖案背景色 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  z-index: 999; /* 可能需要提高 z-index，確保顯示在其他元素之上 */
+}
+
+/* 圖案悬浮效果 */
+.fixed-icon:hover {
+  background-color: #0058a3; /* 悬浮時的背景色 */
+}
+
+/* 圖案悬浮時的圖標效果 */
+.fixed-icon:hover img {
+  filter: brightness(0.8); 
+}
+
+
+/*******************banner***********************/
+.background-image {
+      max-width: 100%; /* 圖片最大寬度設置為父元素寬度的百分比 */
+      height: auto; /* 自動維持圖片比例 */
+      display: block; /* 使圖片作為區塊元素顯示 */
+      margin: 0 auto; /* 居中顯示圖片 */
+      overflow: hidden;
+    }
+
+/*******************body***********************/
+.section1 {
+  padding: 70px;
+  margin: 0px auto;
+  font-family: "Noto Serif TC";
+  text-align: center;
+
+}
+
+/* .section1 > h1 {
+  font-size: 36px;
+  color: #BB0009;
+  letter-spacing: 0px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-family: "Noto Serif TC";
+} */
+
+.section1 > p {
+font-size: 18px;
+color: rgb(89,87,87);
+letter-spacing: 2px;
+line-height: 30px;
+text-align: center;
+font-family: "Noto Serif TC";
+}
+
+.container {
+  padding: 0px;
+  max-width: 1240px;
+  margin: 0px auto;
+}
+
+.about-content {
+  margin-bottom: 70px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  background-color: #ffffff;
+}
+
+.info {
+  /* display: flex; */
+  padding: 40px 50px 70px;
+  position: relative;
+}
+.title {
+  font-size: 30px;
+  color: rgb(89,87,87);
+  /* text-align: right; */
+  /* margin-left: 500px; */
+  position: absolute;
+  right: -600px;
+  top: 120px;
+  line-height: 60px;
+  white-space: pre-wrap;
+  font-family: "Noto Serif TC";
+}
+
+.titlep {
+  margin: 40px 0px;
+  font-size: 18px;
+  color: rgb(89,87,87);
+  text-align: justify;
+  line-height: 30px;
+  white-space: pre-line;
+  line-height:normal;
+  font-family: "Noto Serif TC";
+  position: absolute;
+  right: -600px;
+  top: 150px;
+  position: absolute;
+}
+
+@media (max-width: 990px) {
+  .about-content {
+display: none;
+}
+
+  }
+.infoimage {
+  flex-basis: 420px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px; /* 添加下方的距離 */
+}
+
+.fruitimage {
+  overflow: hidden;
+  margin-bottom: 60px;
+  display: flex;
+  max-width: 100%;
+}
+
+.title2 {
+  font-size: 30px;
+  color: rgb(89,87,87);
+  text-align: left;
+  line-height: 60px;
+  white-space: pre-wrap;
+  font-family: "Noto Serif TC";
+}
+
+.titlep2 {
+  margin: 40px 0px;
+  font-size: 18px;
+  color: rgb(89,87,87);
+  text-align: justify;
+  line-height: 30px;
+  white-space: pre-line;
+  line-height:normal;
+  font-family: "Noto Serif TC";
+}
+
+.info2 {
+  /*flex:100%;*/
+  padding: 115px 150px 70px;
+}
+
+/*圖片排版*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 创建三列的网格 */
+  gap: 50px; /* 设置图像之间的间距 */
+  margin-left: 100px;
+  margin-right: 100px;
+}
+@media (max-width: 990px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 变为单列布局 */
+    margin-left: 20px; /* 调整两边的边距以适应小屏幕 */
+    margin-right: 20px;
+  }
+}
+
+.grid-container img {
+  width: 100%; /* 图像宽度占满父容器 */
+  height: 100%; 
+  background-size: cover;
+}
+
+/*地圖css*/
+.maps {
+  width: auto;
+  position: relative;
+  bottom: -80px;
+  margin: auto;
+  margin-top: 80px;
+} 
+
+.maps {
+  position: relative;
+  padding-bottom: 30%; /* 此為地圖長寬比 */
+  height: 0;
+  overflow: hidden;
+}
+
+.maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.icon01 {
+  display: flex;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+.headerh3 {
+  color: #7c7c7c;
+  font-family: "NSimSun";
+  text-align: center;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+/**********************導覽列其他選單**********************/
+
+  /* 預設隱藏 checkbox */
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  /* 設置 label 的樣式 */
+  .toggle-label {
+    display: block;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: right;
+    /* 將 Toggle Menu 文字設置在右側 */
+    font-size: 30px;
+  }
+
+  /* 側邊選單的樣式 */
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    /*將側邊選單設置在右側並隱藏*/
+    transition: right 0.3s ease;
+  }
+
+  /* 當 checkbox 被選中時展開選單 */
+  input[type="checkbox"]:checked~.sidebar {
+    right: 0;
+  }
+
+  /* 關閉按鈕的樣式 */
+  .close-btn {
+    display: block;
+    text-align: right;
+    padding: 30px;
+    cursor: pointer;
+    color: rgb(89, 87, 87);
+    font-size: 40px;
+  }
+
+  /* 選單項目的樣式 */
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    font-family: "Noto Serif TC";
+    font-size: 18px;
+  }
+
+  
+  .sidebar ul li {
+    padding: 20px;
+  }
+
+  .sidebar ul li a {
+    color: rgb(89, 87, 87);
+    text-decoration: none;
+  }
+
+  .sidebar ul li a:hover {
+    text-decoration: none;
+    color: #5290fb;
+  }
+
+  .menubutton {
+    padding-top: 14px;
+  }
+
+
+  /********************************RWD隱藏導覽列******************/
+
+  @media screen and (max-width: 930px) {
+    .link-secondary {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 930px) {
+    .left group-actions {
+      display: none;
+    }
+
+    .logofirst {
+      width: 50px;
+    }
+  }
+
+  @media screen and (max-width: 930px) {
+    /* 漢堡條固定於右側 */
+    .menubutton {
+        position: fixed;
+        right: 20px; 調整距離右側的距離
+    }
+
+
+    /* Logo 固定於導覽列左側 */
+    .logofirst {
+        position: absolute;
+        left: 20px; /* 調整距離左側的距離 */
+    }
+}
+
+
+
+
+
+
+
+</style>
+
+<body style="background-color:#f6f6f6;">
+
+  <!--上方導覽列-->
+  <div class="navbar-wrapper shadow p-3 mb-5 bg-body">
+    <div class="iMKRuG">
+      <div class="left group-actions">
+        <div class="logofirst">
+          <a href="index.html"> <img src="https://i.postimg.cc/8CJNQJcL/logo-rosemarry-1.png" width="180"></a>
+        </div>
+      </div>
+      <div class="groupactions">
+        <a class="link-secondary buttonsecondary" href="./rosemarry.html">關於品牌</a>
+        <a class="link-secondary buttonsecondary" href="spopping-xmas.html">線上選購</a>
+        <a class="link-secondary buttonsecondary" href="marry.html">喜餅彌月</a>
+        <a class="link-secondary buttonsecondary" href="new.html">最新消息</a>
+        <a class="link-secondary buttonsecondary" href="qa.html">購物須知</a>
+        <div class="button">
+          <img src="https://i.postimg.cc/JhdVggdn/SHOPPING.png" class="firstlogo" href="" width="30">
+        </div>
+        <div class="button secondary">
+          <a href="login.html">
+            <button class="Button__Wrapper-sc-1-1rpmxt-0 1ko0DP small" type="primary" style="width:120px">
+              <span>註冊/登入</span>
+            </button>
+          </a>
+        </div>
+        <!-- 其他選單項目 -->
+        <div class="menubutton">
+          <input type="checkbox" id="toggle">
+          <label for="toggle" class="toggle-label">&#9776;</label>
+          <div class="sidebar">
+            <label for="toggle" class="close-btn">&times;</label>
+            <img src="https://i.postimg.cc/8CJNQJcL/logo-rosemarry-1.png" href="#" alt="logo" height="50" ;>
+            <ul>
+              <li><a href="index.html">首頁</a></li>
+              <li><a href="./rosemarry.html">關於品牌</a></li>
+              <li><a href="spopping-xmas.html">線上選購</a>
+              <li><a href="marry.html">喜餅彌月</a></li>
+              <li><a href="new.html">最新消息</a></li>
+              <li><a href="qa.html">購物須知</a></li>
+              <li><a href="login.html">會員中心</a></li>
+              <!-- 其他選單項目 -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--上方導覽列END-->
+
+<!--ant-layout-content layout-content-->
+
+<main class="ant-layout-content layout-content">
+  <div class="about">
+    <div class="banner">
+      <div style="width">
+        <div class="background-image">
+          <img class="background-image" src="https://i.postimg.cc/rF4N5drs/banner.jpg" alt="Description of Image">
+        </div>
+      </div>
+    </div>
+    <div class="section1">
+      <p>
+        <br>
+        將正宗的法式糕點文化與新鮮、優質的食材相結合
+        <br>
+        為顧客帶來純正、精緻的甜點體驗
+        <br>
+        我們致力於傳統工藝、優質食材、創意與美感、熱情服務
+        <br>
+        希望用甜點的甜蜜風味傳達對於顧客的關懷和熱情
+      </p>
+    </div>
+    <div class="container">
+      <div class="about-content">
+        <div class="info"><img class="infoimageLA" src="https://i.postimg.cc/rsHBtD7M/image.jpg" alt="">
+          <h4 class="title">一個讓顧客沉浸在法國美食和甜點魅力中的地方</h4>
+          <p class="titlep">甜點店的故事始於一位年輕而熱情的甜點大師-『Marie』<br><br>她對甜點的熱愛驅使她開設了這家小而溫馨的甜點店，Marie從小就對法式糕點<br>著迷，總是在廚房裡嘗試各種配方，創造出獨特又美味的甜點。<br><br>滿懷對美食的熱情，Marie 決心將這份熱愛與世界分享。<br>
+          「rosemarry」這個名字是她靈感的結晶，意味著療癒以及生生不息。<br><br>堅持使用新鮮、高品質的食材，每一道甜點都是她心血的他的結晶<br>散發出令人陶醉的香氣和療癒的感受。</p>
+        </div>
+        <div class="infoimage">
+          
+          </div>
+      </div>
+    </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!--ant-layout-content layout-content-->
+
+
+<!--圖片排版-->
+
+<div class="grid-container">
+  <img src="https://i.postimg.cc/Y9Msc9VN/1.jpg" alt="Image 1">
+  <img src="https://i.postimg.cc/90fgMkcr/2.jpg" alt="Image 2">
+  <img src="https://i.postimg.cc/KjVfYv9H/3.jpg" alt="Image 3">
+</div>
+
+
+<!--地圖-->
+<div class="maps">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5773.019453510173!2d120.65904014374445!3d24.153251613641913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9dd9fe0011%3A0x6f9d8ebd38727566!2z5Yuk576OIOiqoOWTgee2oOWckumBkw!5e0!3m2!1szh-TW!2stw!4v1702438525858!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+</div>
+
+
+<!--FOTTER 使用Bootstrap 4 Grids-->
+
+<div class="container-fluid mt-3">
+  <div class="roww row">
+    <div class="col-sm-6 col-lg-3 p-3 text-secondary bg-white">
+      <ul>
+        <li>關於La Saveur Douce</li>
+        <li>最新消息</li>
+        <li>商品列表</li>
+      </ul>
+    </div>
+    <div class="col-sm-6 col-lg-3 p-3 text-secondary bg-white">
+      <ul>
+        <li>喜餅與彌月</li>
+        <li>常見問題</li>
+        <li>會員中心</li>
+      </ul>
+    </div>
+    <div class="col-sm-6 col-lg-3 p-3 text-secondary bg-white">
+      <ul>
+        <li>客服服務時間<br>週一至週日10:00~17:00</li>
+        <li>客服服務電話<br>02-8988-8888</li>
+      </ul>
+    </div>
+    <div class="col-sm-6 col-lg-3 p-3 text-secondary bg-white">
+      <ul>
+        <li>營業時間<br>週一至週日11:00~19:00</li>
+        <li>最後取貨時間<br>週一至週日19:00</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script src="script.js"></script>
+
+  
+
+
+
+</body>
+</html>
